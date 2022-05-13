@@ -1,0 +1,6 @@
+node_modules/
+.secrets
+.DS_Store
+build/
+abi/
+.env

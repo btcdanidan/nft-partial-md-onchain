@@ -1,0 +1,29 @@
+{
+  "name": "ERC721",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "test": "truffle test",
+    "deploy-mumbai": "truffle migrate --reset --network mumbai && sleep 60 && truffle run verify MyNFT --network mumbai",
+    "deploy-matic": "truffle migrate --reset --network matic && sleep 60 && truffle run verify MyNFT --network matic",
+    "deploy-rinkeby": "truffle migrate --reset --network rinkeby && sleep 120 && truffle run verify MyNFT --network rinkeby"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@pinata/sdk": "^1.1.23",
+    "@truffle/contract": "^4.3.39",
+    "@truffle/hdwallet-provider": "^1.6.0",
+    "dotenv": "^10.0.0",
+    "ganache-cli": "^6.12.2",
+    "install": "^0.13.0",
+    "truffle": "^5.5.5",
+    "truffle-plugin-verify": "^0.5.18",
+    "truffle-test-helpers": "^0.2.2"
+  }
+}
